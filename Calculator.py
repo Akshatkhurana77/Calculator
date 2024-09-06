@@ -5,21 +5,33 @@ def menu():
       1. Add (+)
       2. Subtract (-)
       3. Multiply (*)
-      4. Division (/)""")
+      4. Division (/)
+      5. Exit""")
 print(menu())
-c=int(input("Enter your choice:"))
-match c:
-    case 1:
-        d=a+b
-        print(d)
-    case 2:
-        d=a-b
-        print(d)
-    case 3:
-        d=a*b
-        print(d)
-    case 4:
-        d=a/b
-        print(d)
-    
-    
+def case():
+    c=int(input("Enter your choice:"))
+    match c:
+        case 1:
+            d=a+b
+            print(d)
+            print(menu())
+            print(case())
+        case 2:
+            d=a-b
+            print(d)
+            print(menu())
+            print(case())
+        case 3:
+            d=a*b
+            print(d)
+            print(menu())
+            print(case())
+        case 4:
+            d=a/b
+            print(d)
+            print(menu())
+            print(case())
+        case 5:
+            print("Thank you for choosing Akshat code")
+            
+print(case())
